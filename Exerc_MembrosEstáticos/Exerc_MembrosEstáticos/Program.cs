@@ -23,6 +23,5 @@ namespace Exerc_MembrosEstáticos
             Console.ReadKey();
 
         }
-
     }
 }
