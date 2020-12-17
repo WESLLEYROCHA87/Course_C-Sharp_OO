@@ -14,10 +14,8 @@ namespace Exerc_Estoque_Construtor
             string nome = Console.ReadLine();
             Console.Write("Preço: ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Quantidade: ");
-            int quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            Product p = new Product(nome, preco, quantidade);
+          
+            Product p = new Product(nome, preco);
 
             Console.WriteLine();
             Console.WriteLine(p);
