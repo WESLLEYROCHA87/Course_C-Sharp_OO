@@ -8,19 +8,17 @@ namespace Exerc_MembrosEstáticos
     {
         static void Main(string[] args)
         {
-            // • Versão 2: classe Calculadora com membros de instância
-
-            Calculadora calc = new Calculadora();
+            // • Versão 3: classe Calculadora com método estático
 
             Console.Write("Entre o valor do raio: ");
             double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double circ = calc.Circunferencia(raio);
-            double volume = calc.Volume(raio);
+            double circ = Calculadora.Circunferencia(raio);
+            double volume = Calculadora.Volume(raio);
 
             Console.WriteLine("Circunferência: " + circ.ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Valor de Pi: " + calc.Pi.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Valor de Pi: " + Calculadora.Pi.ToString("F2", CultureInfo.InvariantCulture));
 
             Console.ReadKey();
 
