@@ -12,18 +12,15 @@ namespace Exerc_Estoque_Construtor.Entities
         {
         }
 
-        public Product(string name, double price, int quantity)
+        public Product(string name, double price) : this()
         {
             Name = name;
             Price = price;
-            Quantity = quantity;
         }
 
-        public Product(string name, double price)
+        public Product(string name, double price, int quantity) : this(name, price)
         {
-            Name = name;
-            Price = price;
-            Quantity = 0;
+            Quantity = quantity;
         }
 
         public double ValorTotalEmEstoque()
