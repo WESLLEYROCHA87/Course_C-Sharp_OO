@@ -4,23 +4,29 @@ namespace Exerc_Estoque_Construtor.Entities
 {
     class Product
     {
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public int Quantity { get; set; }
+        private string Name { get; set; }
+        private double Price { get; set; }
+        private int Quantity { get; set; }
 
         public Product()
         {
         }
 
-        public Product(string name, double price) : this()
+        public Product(string name, double price, int quantity)
         {
             Name = name;
             Price = price;
+            Quantity = quantity;
         }
 
-        public Product(string name, double price, int quantity) : this(name, price)
+        public string GetName()
         {
-            Quantity = quantity;
+            return Name;
+        }
+
+        public void SetName(string name)
+        {
+            Name = name;
         }
 
         public double ValorTotalEmEstoque()
